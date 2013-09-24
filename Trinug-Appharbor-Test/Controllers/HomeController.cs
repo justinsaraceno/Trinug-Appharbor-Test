@@ -10,7 +10,7 @@ namespace Trinug_Appharbor_Test.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Welcome to TRINUG.";
+            ViewBag.Message = "Welcome to ASDF.";
 
             return View();
         }

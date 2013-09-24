@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Web;
 using System.Web.Mvc;
 using Typesafe.Mailgun;
@@ -32,13 +33,14 @@ namespace Trinug_Appharbor_Test.Controllers
 
         public ActionResult SendMail()
         {
-            /* Send test email. */
-            var client = new MailgunClient("smtp.mailgun.org", "key-5f7yfgqia6tenaxlae5eada956lf8nn3");
-            client.SendMail(new System.Net.Mail.MailMessage("welcome@trinug-test.apphb.com", "justinsaraceno@gmail.com")
-            {
-                Subject = "Hello from AppHarbor and Mailgun",
-                Body = "this is a test message from Appharbor using the Mailgun add-in."
-            });
+            var client = new SmtpClient();
+            var message = new MailMessage(
+                "test@trinug-test.com",
+                "justin.saraceno@gmail.com",
+                "Test email from AppHarbor",
+                "This is a test message using AppHarbot and Mailgun.");
+
+            client.Send(message);
 
             return View("Contact");
         }

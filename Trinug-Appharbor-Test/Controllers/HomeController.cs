@@ -17,7 +17,7 @@ namespace Trinug_Appharbor_Test.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "This is my trinug appharbor demo.";
+            ViewBag.Message = "This is my trinug appharbor demo site.";
 
             return View();
         }

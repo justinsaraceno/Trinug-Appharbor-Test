@@ -11,7 +11,7 @@ namespace Trinug_Appharbor_Test.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Welcome to TekSystems.";
+            ViewBag.Message = "Welcome to Raleigh.";
 
             return View();
         }

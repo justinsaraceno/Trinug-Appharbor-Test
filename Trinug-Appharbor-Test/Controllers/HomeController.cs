@@ -11,7 +11,8 @@ namespace Trinug_Appharbor_Test.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Welcome to Raleigh.";
+            var testName = System.Configuration.ConfigurationManager.AppSettings["TestName"];
+            ViewBag.Message = testName + ", Welcome to Raleigh.";
 
             return View();
         }

@@ -22,7 +22,7 @@ namespace Trinug_Appharbor_Test.Tests.Controllers
             ViewResult result = controller.Index() as ViewResult;
 
             // Assert
-            Assert.AreEqual("Welcome to Raleigh.", result.ViewBag.Message);
+            Assert.AreEqual("Greg, Welcome to Raleigh.", result.ViewBag.Message);
         }
 
         [TestMethod]
